@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    padding: 10px;
+}
+.to-do{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 20px 30px;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: white;
+}
+.to-do h2{
+    color: #002765;
+    display: flex;
+}
+.to-do h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: #edeeed;
+}
+input{
+    flex: 1;  /* use for making the all available space of .row filled if needed shorink or grow for filling */
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+}
+button{
+    border: none;
+    outline: none;
+    background: #ff5945;
+    padding: 16px 25px;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+/* lsit items styling  */
+
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px ;
+    user-select: none; /* when the user want to select the list then he will not select the list */
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    width:28px ;
+    height: 28px;
+    position: absolute;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png); 
+}
+/* spna tag styling  */
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px ;
+    text-align: center;
+    color: #555;
+    font-size: 22px;
+}
+ul li span:hover{
+    background: #edeef0;
+    border-radius: 50%;
+}
